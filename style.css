@@ -107,6 +107,7 @@ section.portfolio .content .image .opacity {
 
 section.features {
   padding: 100px 0 50px 0;
+  background-color: white;
 }
 section.features .text {
   display: flex;
@@ -140,21 +141,45 @@ section.features .blocks .bloc p {
   color: rgb(133, 131, 131);
 }
 
-section.teams .team-img {
-  height: 400px;
+section.teams .team-cards .team-card {
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.767);
 }
-section.teams .team-img img {
+section.teams .team-cards .team-card:hover img {
+  transform: translateY(-60px);
+}
+section.teams .team-cards .team-card:hover .icons {
+  bottom: 0;
+}
+section.teams .team-cards .team-card:nth-of-type(1) {
+  background-color: blue;
+}
+section.teams .team-cards .team-card:nth-of-type(3) {
+  background-color: blue;
+}
+section.teams .team-cards .team-img {
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+}
+section.teams .team-cards .team-img img {
   width: 100%;
   height: 100%;
+  transition: 0.5s;
 }
-section.teams .team-img .icons {
+section.teams .team-cards .team-img .icons {
   display: flex;
-  padding: 10px 65px;
-  margin: 0 auto;
+  height: 60px;
+  padding: 0 65px;
+  align-items: center;
   justify-content: space-between;
   background-color: rgb(253, 51, 85);
+  position: absolute;
+  width: 100%;
+  bottom: -60px;
+  transition: 0.5s;
 }
-section.teams .team-img .icons .icon {
+section.teams .team-cards .team-img .icons .icon {
   border: 1px solid gray;
   border-radius: 50%;
   width: 45px;
@@ -163,12 +188,12 @@ section.teams .team-img .icons .icon {
   justify-content: center;
   align-items: center;
 }
-section.teams .team-img .icons .icon i {
+section.teams .team-cards .team-img .icons .icon i {
   color: white;
   font-size: 25px;
   cursor: pointer;
 }
-section.teams .team-img .icons .icon i:hover {
+section.teams .team-cards .team-img .icons .icon i:hover {
   background-color: white;
   color: rgb(253, 51, 85);
   width: 100%;
@@ -178,8 +203,7 @@ section.teams .team-img .icons .icon i:hover {
   justify-content: center;
   align-items: center;
 }
-section.teams .team-text {
-  background-color: rgba(0, 0, 255, 0.767);
+section.teams .team-cards .team-text {
   margin-top: 65px;
   padding: 25px 30px;
   text-align: center;
@@ -188,9 +212,37 @@ section.teams .team-text {
   flex-direction: column;
   align-items: center;
 }
-section.teams .team-text .team-line {
+section.teams .team-cards .team-text .team-line {
   height: 2px;
   width: 80px;
   background-color: white;
   margin: 20px 0;
+}
+
+section.testimonials {
+  background-color: white;
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 47%;
+}
+section.testimonials button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+section.testimonials button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+section.testimonials .tab-icons {
+  margin-bottom: 30px;
+}
+section.testimonials .tab-icons i {
+  font-size: 13px;
+  color: rgb(253, 51, 85);
 }/*# sourceMappingURL=style.css.map */
